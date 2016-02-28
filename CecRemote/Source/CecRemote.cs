@@ -146,7 +146,7 @@ namespace CecRemote
 
         public void Start()
         {
-            Log.Info("CeCRemote: Version 0.9.5");
+            Log.Info("CeCRemote: Version 0.9.7");
 
           _sleep = false;
           _away = false;
@@ -259,7 +259,6 @@ namespace CecRemote
                             {
                                 if (_away && !_sleep)
                                 {
-                                    _away = false;
                                     Log.Info("CecRemote: PowerControl: System exiting away mode");
                                     HandleResume(false);
                                 }
@@ -300,7 +299,7 @@ namespace CecRemote
 
         private void HandleResume(bool automatic)
         {
-            if (_sleep)
+            if (_sleep || _away)
             {
                 _sleep = false;
                 _away = false;

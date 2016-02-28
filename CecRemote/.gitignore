@@ -1,0 +1,9 @@
+/Source/bin/
+/Source/obj/
+/Source/CecRemoteMP2/obj/
+/Source/CecRemoteMP2/bin/
+/Tests/
+*.dll
+*.mpe1
+*.suo
+*_old*
