@@ -5,7 +5,7 @@ It allows you to control MediaPortal with your TV’s remote using HDMI-CEC sign
 
 
 
-Feature
+Features
 
 - fully customizable key mappings
 - automatically power on TV when MediaPortal starts
