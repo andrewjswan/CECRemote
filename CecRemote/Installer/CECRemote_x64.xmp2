@@ -196,7 +196,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <Author>Tuomas, Springfield, ajs</Author>
     <HomePage>https://github.com/andrewjswan/CECRemote</HomePage>
     <ForumPage />
-    <UpdateUrl>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CECRemote/Release/CECRemote-x64.xml</UpdateUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CECRemote-x64.xml</UpdateUrl>
     <Version>
       <Major>0</Major>
       <Minor>11</Minor>
@@ -206,7 +206,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <ExtensionDescription>Plugin, which allows user to control MediaPortal using HDMI-CEC commands with libcec compatible adapters.</ExtensionDescription>
     <VersionDescription>First x64 version</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CECRemote/Release/CECRemote-x64-{VERSION}.mpe1</OnlineLocation>
+    <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CECRemote-x64-{VERSION}.mpe1</OnlineLocation>
     <ReleaseDate>2023-07-17T23:06:34</ReleaseDate>
     <Tags>cec, remote, x64</Tags>
     <Location>..\Release\CECRemote-x64-MAJOR.MINOR.BUILD.REVISION.mpe1</Location>
@@ -277,7 +277,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
   <ProjectSettings>
     <FolderGroups />
     <ProjectFilename>CECRemote_x64.xmp2</ProjectFilename>
-    <UpdatePath1>V:\Development\Mediaportal\CECRemote\CECRemote\Release\CECRemote-x64-{VERSION}.xml</UpdatePath1>
+    <UpdatePath1>V:\Development\Mediaportal\CECRemote\CecRemote\Release\CECRemote-x64-{VERSION}.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
   </ProjectSettings>
