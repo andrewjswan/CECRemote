@@ -56,20 +56,19 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Utils, Version=1.2.2.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="Common.Utils, Version=1.31.100.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\MEDIACENTER\Program Files (x86)\Team MediaPortal\MediaPortal\Common.Utils.dll</HintPath>
+      <HintPath>..\External\Common.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Core, Version=1.2.2.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\MEDIACENTER\Program Files (x86)\Team MediaPortal\MediaPortal\Core.dll</HintPath>
+      <HintPath>..\External\Core.dll</HintPath>
     </Reference>
-    <Reference Include="LibCecSharp, Version=2.1.1.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\MEDIACENTER\Program Files (x86)\Team MediaPortal\MediaPortal\plugins\process\LibCecSharp\LibCecSharp.dll</HintPath>
+    <Reference Include="LibCecSharp">
+      <HintPath>..\External\LibCecSharp.dll</HintPath>
     </Reference>
     <Reference Include="RemotePlugins">
-      <HintPath>\\MEDIACENTER\Program Files (x86)\Team MediaPortal\MediaPortal\RemotePlugins.dll</HintPath>
+      <HintPath>..\External\RemotePlugins.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -78,7 +77,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Utils, Version=1.2.2.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\MEDIACENTER\Program Files (x86)\Team MediaPortal\MediaPortal\Utils.dll</HintPath>
+      <HintPath>..\External\Utils.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -137,9 +136,16 @@
     <None Include="Properties\DataSources\CecRemote.datasource" />
     <None Include="Properties\DataSources\CecSettings.datasource" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y $(TargetDir)$(TargetFileName) \\MEDIACENTER\"Program Files (x86)"\"Team MediaPortal"\MediaPortal\plugins\process\</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+        None
+    </ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

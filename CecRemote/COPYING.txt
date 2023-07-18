@@ -1,6 +1,7 @@
 CECRemote
 
  Copyright (C) 2012, CECRemote team
+ Copyright (C) 2023, Team MediaPortal
 
  CECRemote is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

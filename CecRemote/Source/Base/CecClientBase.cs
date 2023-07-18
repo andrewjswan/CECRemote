@@ -134,7 +134,7 @@ namespace CecRemote.Base
         if (_libConfig == null)
         {
           _libConfig = new LibCECConfiguration();
-          _libConfig.SetCallbacks(this);
+          // _libConfig.SetCallbacks(this);
         }
         
         _libConfig.DeviceTypes.Types[0] = _cecConfig.DeviceType;
@@ -158,13 +158,15 @@ namespace CecRemote.Base
 
         if (_lib == null)
         {
-          _lib = new LibCecSharp(_libConfig);
+          // _lib = new LibCecSharp(_libConfig);
+          _lib = new LibCecSharp(this, _libConfig);
           WriteLog("Lib created succesfully.");
         }
         else
         {
           _lib.SetConfiguration(_libConfig);
-          _lib.EnableCallbacks(this);
+          // _lib.EnableCallbacks(this);
+          _lib.EnableCallbacks();
           WriteLog("Lib configuration updated");
         }
       }
@@ -282,7 +284,8 @@ namespace CecRemote.Base
 
       if (_audiosystem)
       {
-          return _lib.MuteAudio(release);
+        // return _lib.MuteAudio(release);
+        return _lib.MuteAudio();
       }
       
       _lib.SendKeypress(CecLogicalAddress.Tv, CecUserControlCode.Mute, false);

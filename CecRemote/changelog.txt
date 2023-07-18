@@ -1,5 +1,11 @@
 CECREMOTE - Changelog
 
+0.11.1
+
+*change Libcec version update 6.0.2
+
+*x64 version
+
 0.9.7
 
 *fix When returning from away mode, sometimes devices are not powered on correctly.

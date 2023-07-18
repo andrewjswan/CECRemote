@@ -1,4 +1,4 @@
-CECREMOTE
+CECREMOTE (x86/x64)
 
 CecRemote is a remote control plugin for the MediaPortal media center software (http://www.team-mediaportal.com). 
 It allows you to control MediaPortal with your TV’s remote using HDMI-CEC signals.
@@ -27,10 +27,10 @@ Once you have installed and configured MediaPortal, download latest version of t
 
 Compilation
 
-To compile CECRemote, you need Visual Studio 2010(+) and the following dependencies:
+To compile CECRemote, you need Visual Studio 2019(+) and the following dependencies:
 
-- Media Portal 1.6.x or newer (references to libraries in Media Portal install dir)
-- libCEC < 3.1.0 (reference to LibCecSharp)
+- Media Portal 1.31.100 or newer (references to libraries in Media Portal install dir)
+- libCEC 6.0.0 (reference to LibCecSharp)
 
 
 

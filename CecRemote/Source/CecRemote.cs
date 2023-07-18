@@ -1,6 +1,6 @@
 ﻿// CECRemote
 //
-// Copyright (C) 2012-2013, CECRemote team
+// Copyright (C) 2012-2023, CECRemote team
 //
 // CECRemote is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -16,13 +16,13 @@
 // along with CECRemote. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.IO;
 using System.Xml;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
+
 using MediaPortal.GUI.Library;
 using MediaPortal.Configuration;
 
@@ -87,10 +87,12 @@ namespace CecRemote
         // show the setup dialog
         public void ShowPlugin()
         {
-          
-            CecSettings settings = new CecSettings();
-            settings.StartPosition = FormStartPosition.CenterParent;
-            settings.ShowDialog();
+
+        CecSettings settings = new CecSettings
+        {
+          StartPosition = FormStartPosition.CenterParent
+        };
+        settings.ShowDialog();
            
         }
 
@@ -146,15 +148,17 @@ namespace CecRemote
 
         public void Start()
         {
-            Log.Info("CeCRemote: Version 0.9.7");
+            Log.Info("CeCRemote: Version 0.9.8");
 
           _sleep = false;
           _away = false;
 
           PrepareClient();
 
-          Thread starterThread = new Thread(new ThreadStart(_client.OnStart));
-          starterThread.Name = "CECMain";
+          Thread starterThread = new Thread(new ThreadStart(PrepareAndStart))
+          {
+            Name = "CECMain"
+          };
           starterThread.Start();
            
 
@@ -187,6 +191,11 @@ namespace CecRemote
 
         }
 
+        private void PrepareAndStart()
+        {
+          Thread.Sleep(10000);
+          _client.OnStart();
+        }
 
         public void Stop()
         {
@@ -321,15 +330,19 @@ namespace CecRemote
 
             if (automatic)
             {
-                Thread resumeThread = new Thread(new ThreadStart(_client.OnResumeByAutomatic));
-                resumeThread.Name = "CECResA";
-                resumeThread.Start();
+              Thread resumeThread = new Thread(new ThreadStart(_client.OnResumeByAutomatic))
+              {
+                Name = "CECResA"
+              };
+              resumeThread.Start();
             }
             else
             {
-                Thread resumeThread = new Thread(new ThreadStart(_client.OnResumeByUser));
-                resumeThread.Name = "CECResU";
-                resumeThread.Start();
+              Thread resumeThread = new Thread(new ThreadStart(_client.OnResumeByUser))
+              {
+                Name = "CECResU"
+              };
+              resumeThread.Start();
             }
         }
 
@@ -374,8 +387,7 @@ namespace CecRemote
         {
           Log.Debug("CecRemote: Loading translated strings for MPEI settings.");
 
-          string lang = "";
-
+          string lang;
           try
           {
             lang = GUILocalizeStrings.GetCultureName(GUILocalizeStrings.CurrentLanguage());

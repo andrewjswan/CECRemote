@@ -29,11 +29,11 @@ using MediaPortal.Common.Utils;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CecRemote")]
-[assembly: AssemblyDescription("CecRemote plugin for MediaPortal")]
+[assembly: AssemblyTitle("CECRemote")]
+[assembly: AssemblyDescription("CECRemote plugin for MediaPortal")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CecRemote")]
+[assembly: AssemblyProduct("CECRemote")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -56,5 +56,5 @@ using MediaPortal.Common.Utils;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.9.7.0")]
-[assembly: AssemblyFileVersion("0.9.7.0")]
+[assembly: AssemblyVersion("0.11.1.$WCREV$")]
+[assembly: AssemblyFileVersion("0.11.1.$WCREV$")]

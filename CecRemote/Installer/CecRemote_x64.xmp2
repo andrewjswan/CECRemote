@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PackageClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PackageClass xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Version>2.0</Version>
   <Groups>
     <Items>
@@ -13,28 +13,28 @@
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>Release\CecRemote.dll</LocalFileName>
+              <LocalFileName>..\Source\bin\Release\CecRemote.dll</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{c489b589-09e0-4824-b2a9-e57f5dac26cc}-CecRemote.dll</ZipFileName>
               <DestinationFilename>%Plugins%\process\CecRemote.dll</DestinationFilename>
             </FileItem>
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>Release\LibCecSharp\libcec.dll</LocalFileName>
+              <LocalFileName>..\External\x64\LibCecSharp.dll</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{44a5f835-81af-499c-a9ba-2fba5b953864}-libcec.dll</ZipFileName>
-              <DestinationFilename>%Plugins%\process\LibCecSharp\libcec.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>Release\LibCecSharp\LibCecSharp.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{dd9ea537-7dba-4bb2-80e7-7c090a391397}-LibCecSharp.dll</ZipFileName>
               <DestinationFilename>%Plugins%\process\LibCecSharp\LibCecSharp.dll</DestinationFilename>
             </FileItem>
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>Release\CecRemote.xml</LocalFileName>
+              <LocalFileName>..\External\x64\cec.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{dd9ea537-7dba-4bb2-80e7-7c090a391397}-LibCecSharp.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\process\LibCecSharp\cec.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>InputDeviceMappings\CecRemote.xml</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{9ff7d7bf-8634-41c8-934d-d7d8aac6dc82}-CecRemote.xml</ZipFileName>
               <DestinationFilename>%Base%\defaults\InputDeviceMappings\CecRemote.xml</DestinationFilename>
             </FileItem>
@@ -176,40 +176,40 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <CompatibleVersion>
           <Items>
             <CompatibleVersionItem>
-              <MinRequiredVersion>1.1.6.27644</MinRequiredVersion>
-              <DesignedForVersion>1.1.6.27644</DesignedForVersion>
+              <MinRequiredVersion>1.6.0.0</MinRequiredVersion>
+              <DesignedForVersion>1.6.0.0</DesignedForVersion>
             </CompatibleVersionItem>
           </Items>
         </CompatibleVersion>
         <SubSystemsUsed>
           <Items>
-            <SubSystemItem Name="MP.Input" />
             <SubSystemItem Name="MP.Config" />
+            <SubSystemItem Name="MP.Input" />
           </Items>
         </SubSystemsUsed>
       </PluginDependencyItem>
     </Items>
   </PluginDependencies>
   <GeneralInfo>
-    <Name>CecRemote</Name>
-    <Id>cb89aada-3b22-44e3-b5dc-f4fb02940f42</Id>
-    <Author>Tuomas, Springfield</Author>
-    <HomePage />
+    <Name>CecRemote (x64)</Name>
+    <Id>5da44c68-3359-40c6-8e9e-31fc868ec794</Id>
+    <Author>Tuomas, Springfield, ajs</Author>
+    <HomePage>https://github.com/andrewjswan/CECRemote</HomePage>
     <ForumPage />
-    <UpdateUrl />
+    <UpdateUrl>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CecRemote-x64.xml</UpdateUrl>
     <Version>
       <Major>0</Major>
-      <Minor>8</Minor>
-      <Build>2</Build>
+      <Minor>11</Minor>
+      <Build>1</Build>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin, which allows user to control MediaPortal using HDMI-CEC commands with libcec compatible adapters.</ExtensionDescription>
-    <VersionDescription />
+    <VersionDescription>First x64 version</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation />
-    <ReleaseDate>2012-11-15T23:06:34</ReleaseDate>
-    <Tags />
-    <Location>S:\work\Remote\Release\CecRemote.mpe1</Location>
+    <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CECRemote-x64-{VERSION}.mpe1</OnlineLocation>
+    <ReleaseDate>2023-07-17T23:06:34</ReleaseDate>
+    <Tags>cec, remote, x64</Tags>
+    <Location>..\Release\CECRemote-x64-MAJOR.MINOR.BUILD.REVISION.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -247,28 +247,28 @@ Click Next to continue or Cancel to exit Setup.</Value>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>Release\CecRemote.dll</LocalFileName>
+        <LocalFileName>..\Source\bin\Release\CecRemote.dll</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{c489b589-09e0-4824-b2a9-e57f5dac26cc}-CecRemote.dll</ZipFileName>
         <DestinationFilename>%Plugins%\process\CecRemote.dll</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>Release\LibCecSharp\libcec.dll</LocalFileName>
+        <LocalFileName>..\External\x64\LibCecSharp.dll</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{44a5f835-81af-499c-a9ba-2fba5b953864}-libcec.dll</ZipFileName>
-        <DestinationFilename>%Plugins%\process\LibCecSharp\libcec.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>Release\LibCecSharp\LibCecSharp.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{dd9ea537-7dba-4bb2-80e7-7c090a391397}-LibCecSharp.dll</ZipFileName>
         <DestinationFilename>%Plugins%\process\LibCecSharp\LibCecSharp.dll</DestinationFilename>
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>Release\CecRemote.xml</LocalFileName>
+        <LocalFileName>..\External\x64\cec.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{dd9ea537-7dba-4bb2-80e7-7c090a391397}-LibCecSharp.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\process\LibCecSharp\cec.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>InputDeviceMappings\CecRemote.xml</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{9ff7d7bf-8634-41c8-934d-d7d8aac6dc82}-CecRemote.xml</ZipFileName>
         <DestinationFilename>%Base%\defaults\InputDeviceMappings\CecRemote.xml</DestinationFilename>
       </FileItem>
@@ -276,8 +276,8 @@ Click Next to continue or Cancel to exit Setup.</Value>
   </UniqueFileList>
   <ProjectSettings>
     <FolderGroups />
-    <ProjectFilename>CecRemote.xmp2</ProjectFilename>
-    <UpdatePath1 />
+    <ProjectFilename>CecRemote_x64.xmp2</ProjectFilename>
+    <UpdatePath1>V:\Development\Mediaportal\CECRemote\CecRemote\Release\CECRemote-x64-{VERSION}.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
   </ProjectSettings>
