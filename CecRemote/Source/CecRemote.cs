@@ -1,6 +1,7 @@
 ﻿// CECRemote
 //
 // Copyright (C) 2012-2023, CECRemote team
+// Copyright (C) 2005-2023, Team MediaPortal
 //
 // CECRemote is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -59,7 +60,7 @@ namespace CecRemote
         private bool _sleep;
         private bool _away;
         private readonly string DefaultLanguage = "en-US";
-        private readonly string Guid_x86 = "cb89aada-3b22-44e3-b5dc-f4fb02940f42";
+        private readonly string Guid_x86 = "529db6e4-7b22-460f-bd62-7f2fd4b16868";
         private readonly string Guid_x64 = "5da44c68-3359-40c6-8e9e-31fc868ec794";
 
         #endregion
@@ -149,7 +150,7 @@ namespace CecRemote
 
         public void Start()
         {
-          Log.Info("CeCRemote: Version {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString());
+          Log.Info("CECRemote: Version {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
           _sleep = false;
           _away = false;
@@ -178,7 +179,7 @@ namespace CecRemote
           }
           catch
           {
-            Log.Debug("CecRemote: Error while subscribing to extensions update event, extensions plugin probably not installed.");
+            Log.Debug("CECRemote: Error while subscribing to extensions update event, extensions plugin probably not installed.");
           }
 
           if (_config.ControlVolume)
@@ -200,11 +201,11 @@ namespace CecRemote
 
         public void Stop()
         {
-            Log.Info("CecRemote: Closing connection to client...");
+            Log.Info("CECRemote: Closing connection to client...");
 
             if (_client == null)
             {
-              Log.Info("CecRemote: Client already closed. Plugin exit.");
+              Log.Info("CECRemote: Client already closed. Plugin exit.");
               return;
             }
 
@@ -213,7 +214,7 @@ namespace CecRemote
             _client = null;
             _config = null;
 
-            Log.Info("CecRemote: Plugin exit.");
+            Log.Info("CECRemote: Plugin exit.");
 
         }
 
@@ -230,7 +231,7 @@ namespace CecRemote
                         {
                             _sleep = true;
 
-                            Log.Info("CecRemote: PowerControl: System going to sleep, stopping CEC-client...");
+                            Log.Info("CECRemote: PowerControl: System going to sleep, stopping CEC-client...");
 
                             if (_client != null)
                             {
@@ -239,21 +240,21 @@ namespace CecRemote
                         }
                         else
                         {
-                            Log.Warn("CecRemote: PowerControl: Received PBT_APMSUSPEND when remote state already suspended");
+                            Log.Warn("CECRemote: PowerControl: Received PBT_APMSUSPEND when remote state already suspended");
                         }
 
                         break;
 
                     case PBT_APMRESUMESUSPEND:
                         
-                        Log.Info("CecRemote: PowerControl: User input detected after sleep (APMRESUMESUSPEND)");
+                        Log.Info("CECRemote: PowerControl: User input detected after sleep (APMRESUMESUSPEND)");
                         HandleResume(false);
 
                         break;
 
                     case PBT_APMRESUMEAUTOMATIC:
                         
-                        Log.Info("CecRemote: PowerControl: System resuming from sleep (APMRESUMEAUTOMATIC)");
+                        Log.Info("CECRemote: PowerControl: System resuming from sleep (APMRESUMEAUTOMATIC)");
                         HandleResume(true);
                     
                         break;
@@ -269,12 +270,12 @@ namespace CecRemote
                             {
                                 if (_away && !_sleep)
                                 {
-                                    Log.Info("CecRemote: PowerControl: System exiting away mode");
+                                    Log.Info("CECRemote: PowerControl: System exiting away mode");
                                     HandleResume(false);
                                 }
                                 else
                                 {
-                                    Log.Warn("CecRemote: PowerControl: Received GUID_SYSTEM_AWAYMODE 0 and sleepmode is {0} and awaymode is {1}", _sleep.ToString(), _away.ToString());
+                                    Log.Warn("CECRemote: PowerControl: Received GUID_SYSTEM_AWAYMODE 0 and sleepmode is {0} and awaymode is {1}", _sleep.ToString(), _away.ToString());
                                 }
                             }
                             else
@@ -282,7 +283,7 @@ namespace CecRemote
                                 if (!_away)
                                 {
                                     _away = true;
-                                    Log.Info("CecRemote: PowerControl: System entering away mode");
+                                    Log.Info("CECRemote: PowerControl: System entering away mode");
 
                                     if (_client != null)
                                     {
@@ -291,7 +292,7 @@ namespace CecRemote
                                 }
                                 else
                                 {
-                                    Log.Warn("CecRemote: PowerControl: Received GUID_SYSTEM_AWAYMODE 1 and awaymode is {0}", _away.ToString());
+                                    Log.Warn("CECRemote: PowerControl: Received GUID_SYSTEM_AWAYMODE 1 and awaymode is {0}", _away.ToString());
                                 }
                             }
                         }
@@ -364,7 +365,7 @@ namespace CecRemote
             }
             catch (Exception ex)
             {
-              Log.Error("CecRemote: Error while reading config. " + ex.ToString());
+              Log.Error("CECRemote: Error while reading config. " + ex.ToString());
               // Defaults will be used automatically if config reading fails, so we can still try to connect.
             }
           }
@@ -375,7 +376,7 @@ namespace CecRemote
           // Check if message is for us
           if (guid == (IntPtr.Size == 8 ? this.Guid_x64 : this.Guid_x86))
           {
-            Log.Debug("CecRemote: Settings changed from Extensions plugin, updating configuration.");
+            Log.Debug("CECRemote: Settings changed from Extensions plugin, updating configuration.");
 
             _config = null;
             PrepareClient();
@@ -386,7 +387,7 @@ namespace CecRemote
 
         private void LoadTranslations()
         {
-          Log.Debug("CecRemote: Loading translated strings for MPEI settings.");
+          Log.Debug("CECRemote: Loading translated strings for MPEI settings.");
 
           string lang;
           try
@@ -395,11 +396,11 @@ namespace CecRemote
           }
           catch (Exception)
           {
-            Log.Debug("CecRemote: Unable to detect current language. Using English.");
+            Log.Debug("CECRemote: Unable to detect current language. Using English.");
             lang = this.DefaultLanguage;
           }
 
-          Log.Debug("CecRemote: MPEI settings language set to " + lang);
+          Log.Debug("CECRemote: MPEI settings language set to " + lang);
 
           XmlDocument xmlTranslation = new XmlDocument();
 
@@ -412,7 +413,7 @@ namespace CecRemote
             }
             catch
             {
-              Log.Debug("CecRemote: Could not open translation file for langueage: {0}. Loading default language: {1}", lang, DefaultLanguage);
+              Log.Debug("CECRemote: Could not open translation file for langueage: {0}. Loading default language: {1}", lang, DefaultLanguage);
               lang = this.DefaultLanguage;
               continue;
             }
@@ -429,7 +430,7 @@ namespace CecRemote
               }
               catch (Exception ex)
               {
-                Log.Error("CecRemote: Error while loading translations. Translation string missing or invalid. " + ex.Message);
+                Log.Error("CECRemote: Error while loading translations. Translation string missing or invalid. " + ex.Message);
               }
             }
           }

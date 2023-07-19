@@ -42,7 +42,24 @@
         </Items>
       </Dependencies>
       <PluginDependencies>
-        <Items />
+        <Items>
+          <PluginDependencyItem AssemblyName="CECRemote.dll">
+            <CompatibleVersion>
+              <Items>
+                <CompatibleVersionItem>
+                  <MinRequiredVersion>1.6.0.0</MinRequiredVersion>
+                  <DesignedForVersion>1.6.0.0</DesignedForVersion>
+                </CompatibleVersionItem>
+              </Items>
+            </CompatibleVersion>
+            <SubSystemsUsed>
+              <Items>
+                <SubSystemItem Name="MP.Config" />
+                <SubSystemItem Name="MP.Input" />
+              </Items>
+            </SubSystemsUsed>
+          </PluginDependencyItem>
+        </Items>
       </PluginDependencies>
       <GeneralInfo>
         <Name>CECRemote (x64)</Name>
@@ -55,13 +72,14 @@
           <Major>0</Major>
           <Minor>11</Minor>
           <Build>1</Build>
-          <Revision>27</Revision>
+          <Revision>33</Revision>
         </Version>
         <ExtensionDescription>Plugin, which allows user to control MediaPortal using HDMI-CEC commands with libcec compatible adapters.</ExtensionDescription>
-        <VersionDescription>First x64 version</VersionDescription>
+        <VersionDescription>Change Libcec version update 6.0.2
+First x64 version</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CECRemote-x64-0.11.1.27.mpe1</OnlineLocation>
-        <ReleaseDate>2023-07-18T20:33:51.354799+03:00</ReleaseDate>
+        <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CECRemote-x64-0.11.1.33.mpe1</OnlineLocation>
+        <ReleaseDate>2023-07-19T20:06:55.6713499+03:00</ReleaseDate>
         <Tags>cec, remote, x64</Tags>
         <Location>..\Release\CECRemote-x64-MAJOR.MINOR.BUILD.REVISION.mpe1</Location>
         <Params>

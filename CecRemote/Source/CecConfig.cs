@@ -75,7 +75,7 @@ namespace CecRemote
       }
       catch (Exception ex)
       {
-        Log.Error("CecRemote: Configuration read failed, using defaults! {0}", ex.ToString());
+        Log.Error("CECRemote: Configuration read failed, using defaults! {0}", ex.ToString());
         base.SetDefaults();
       }
 
@@ -121,7 +121,7 @@ namespace CecRemote
       }
       catch (Exception ex)
       {
-          Log.Error("CecRemote: Configuration write failed, settings not saved correctly! {0}", ex.ToString());
+          Log.Error("CECRemote: Configuration write failed, settings not saved correctly! {0}", ex.ToString());
           throw;
       }
     }

@@ -806,7 +806,7 @@ namespace CecRemote
             this.Name = "CecSettings";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "CecRemote - Settings";
+            this.Text = "CECRemote - Settings";
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

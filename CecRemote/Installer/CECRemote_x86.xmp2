@@ -171,28 +171,11 @@ Click Next to continue or Cancel to exit Setup.</Value>
     </Items>
   </Dependencies>
   <PluginDependencies>
-    <Items>
-      <PluginDependencyItem AssemblyName="CECRemote.dll">
-        <CompatibleVersion>
-          <Items>
-            <CompatibleVersionItem>
-              <MinRequiredVersion>1.6.0.0</MinRequiredVersion>
-              <DesignedForVersion>1.6.0.0</DesignedForVersion>
-            </CompatibleVersionItem>
-          </Items>
-        </CompatibleVersion>
-        <SubSystemsUsed>
-          <Items>
-            <SubSystemItem Name="MP.Config" />
-            <SubSystemItem Name="MP.Input" />
-          </Items>
-        </SubSystemsUsed>
-      </PluginDependencyItem>
-    </Items>
+    <Items />
   </PluginDependencies>
   <GeneralInfo>
     <Name>CECRemote (x86)</Name>
-    <Id>cb89aada-3b22-44e3-b5dc-f4fb02940f42</Id>
+    <Id>529db6e4-7b22-460f-bd62-7f2fd4b16868</Id>
     <Author>Tuomas, Springfield, ajs</Author>
     <HomePage>https://github.com/andrewjswan/CECRemote</HomePage>
     <ForumPage />
@@ -207,7 +190,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <VersionDescription>Change Libcec version update 6.0.2</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CECRemote-x86-{VERSION}.mpe1</OnlineLocation>
-    <ReleaseDate>2023-07-17T23:06:34</ReleaseDate>
+    <ReleaseDate>2023-07-19T23:06:34</ReleaseDate>
     <Tags>cec, remote, x86</Tags>
     <Location>..\Release\CECRemote-x86-MAJOR.MINOR.BUILD.REVISION.mpe1</Location>
     <Params>

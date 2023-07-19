@@ -1,5 +1,6 @@
 /Source/bin/
 /Source/obj/
 /Tests/
+*.log
 *.suo
 *_old*

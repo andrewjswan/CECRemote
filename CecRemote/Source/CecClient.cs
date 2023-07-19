@@ -30,7 +30,7 @@ namespace CecRemote
 
       if (!_remoteHandler.IsLoaded)
       {
-        Log.Error("CecRemote: Error loading mapping file - check configuration.");
+        Log.Error("CECRemote: Error loading mapping file - check configuration.");
       }
 
     }
@@ -65,7 +65,7 @@ namespace CecRemote
 
     protected override void WriteLog(string message)
     {
-        Log.Debug("CecRemote: " + message);
+        Log.Debug("CECRemote: " + message);
     }
 
     protected delegate void InvokeButtonDelegate(int button);
@@ -74,7 +74,7 @@ namespace CecRemote
     {
         if (!_remoteHandler.MapAction((int)button))
         {
-            Log.Info("CecRemote: Received unmapped button with code: " + button.ToString());
+            Log.Info("CECRemote: Received unmapped button with code: " + button.ToString());
         }
     }
 
