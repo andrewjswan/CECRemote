@@ -59,7 +59,8 @@ namespace CecRemote
         private bool _sleep;
         private bool _away;
         private readonly string DefaultLanguage = "en-US";
-        private readonly string Guid = "cb89aada-3b22-44e3-b5dc-f4fb02940f42";
+        private readonly string Guid_x86 = "cb89aada-3b22-44e3-b5dc-f4fb02940f42";
+        private readonly string Guid_x64 = "5da44c68-3359-40c6-8e9e-31fc868ec794";
 
         #endregion
 
@@ -81,7 +82,7 @@ namespace CecRemote
         // Returns the author of the plugin which is shown in the plugin menu
         public string Author()
         {
-            return "Tuomaa, Springfield, libcec by Pulse-Eight";
+            return "Tuomaa, Springfield, ajs, libcec by Pulse-Eight";
         }
 
         // show the setup dialog
@@ -148,7 +149,7 @@ namespace CecRemote
 
         public void Start()
         {
-            Log.Info("CeCRemote: Version 0.9.8");
+          Log.Info("CeCRemote: Version {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
           _sleep = false;
           _away = false;
@@ -372,7 +373,7 @@ namespace CecRemote
         public void MPEI_OnConfigurationChanged(string guid)
         {
           // Check if message is for us
-          if (guid == this.Guid)
+          if (guid == (IntPtr.Size == 8 ? this.Guid_x64 : this.Guid_x86))
           {
             Log.Debug("CecRemote: Settings changed from Extensions plugin, updating configuration.");
 
