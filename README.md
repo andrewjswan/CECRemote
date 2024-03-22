@@ -1,10 +1,11 @@
 ## CECREMOTE
+[![MP AnyCPU](https://img.shields.io/badge/MP-AnyCPU-blue?logo=windows&logoColor=white)](https://github.com/andrewjswan/CECRemote/releases)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/andrewjswan/CECRemote/build.yml?logo=github)](https://github.com/andrewjswan/CECRemote/actions)
 [![GitHub](https://img.shields.io/github/license/andrewjswan/CECRemote?color=blue)](https://github.com/andrewjswan/CECRemote/blob/master/LICENSE)
-[![Build](https://github.com/andrewjswan/CECRemote/actions/workflows/build.yml/badge.svg)](https://github.com/andrewjswan/CECRemote/actions/workflows/build.yml)
 [![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/andrewjswan/CECRemote?include_prereleases)](https://github.com/andrewjswan/CECRemote/releases)
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/downloads-pre/andrewjswan/CECRemote/latest/total?label=release@downloads)](https://github.com/andrewjswan/CECRemote/releases)
-[![CECRemote x86](https://img.shields.io/badge/CECRemote-x86-orange?logo=windows&logoColor=white)](https://github.com/andrewjswan/CECRemote/releases)[![CECRemote x64](https://img.shields.io/badge/x64-blue?logoColor=white)](https://github.com/andrewjswan/CECRemote/releases)
 [![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
+
 
 CecRemote is a remote control plugin for the MediaPortal media center software (http://www.team-mediaportal.com). 
 It allows you to control MediaPortal with your TV’s remote using HDMI-CEC signals.
