@@ -1,5 +1,6 @@
-## CECREMOTE (x86/x64)
+## CECREMOTE
 [![GitHub](https://img.shields.io/github/license/andrewjswan/CECRemote?color=blue)](https://github.com/andrewjswan/CECRemote/blob/master/LICENSE)
+[![Build](https://github.com/andrewjswan/CECRemote/actions/workflows/build.yml/badge.svg)](https://github.com/andrewjswan/CECRemote/actions/workflows/build.yml)
 [![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/andrewjswan/CECRemote?include_prereleases)](https://github.com/andrewjswan/CECRemote/releases)
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/downloads-pre/andrewjswan/CECRemote/latest/total?label=release@downloads)](https://github.com/andrewjswan/CECRemote/releases)
 [![CECRemote x86](https://img.shields.io/badge/CECRemote-x86-orange?logo=windows&logoColor=white)](https://github.com/andrewjswan/CECRemote/releases)[![CECRemote x64](https://img.shields.io/badge/x64-blue?logoColor=white)](https://github.com/andrewjswan/CECRemote/releases)

@@ -2,14 +2,8 @@
 cls
 Title Building MediaPortal CEC Remote (RELEASE)
 
-IF NOT "%1"=="" (
-  SET ARCH=%1
-) ELSE (
-  SET ARCH=x64
-)
-
 ECHO.
-ECHO Building CECRemote %ARCH% ...
+ECHO Building CECRemote ...
 
 cd ..\Source
 
@@ -32,7 +26,7 @@ set REVISION=%REVISION: =%
 :: Prepare library
 echo.
 echo Copy %ARCH% library...
-copy ..\External\%ARCH%\LibCecSharp.dll ..\External\
+copy ..\External\x64\LibCecSharp.dll ..\External\
 
 :: Build
 "%WINDIR%\Microsoft.NET\Framework\v4.0.30319\MSBUILD.exe" /target:Rebuild /property:Configuration=RELEASE /fl /flp:logfile=CECRemote.log;verbosity=diagnostic CECRemote.sln
@@ -43,4 +37,3 @@ git checkout Properties\AssemblyInfo.cs
 cd ..\Installer
 
 pause
-

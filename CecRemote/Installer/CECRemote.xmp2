@@ -10,33 +10,47 @@
         <Description>Default</Description>
         <Files>
           <Items>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\Source\bin\Release\CECRemote.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{c489b589-09e0-4824-b2a9-e57f5dac26cc}-CECRemote.dll</ZipFileName>
+              <LocalFileName>..\Source\bin\Release\CecRemote.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d726129e-4a8b-497a-9c80-266699bb39ba}-CecRemote.dll</ZipFileName>
               <DestinationFilename>%Plugins%\process\CECRemote.dll</DestinationFilename>
             </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\External\x86\LibCecSharp.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{44a5f835-81af-499c-a9ba-2fba5b953864}-libcec.dll</ZipFileName>
-              <DestinationFilename>%Plugins%\process\LibCecSharp\LibCecSharp.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
-              <Param1 />
-              <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>..\External\x86\cec.dll</LocalFileName>
-              <ZipFileName>Installer{CopyFile}\{dd9ea537-7dba-4bb2-80e7-7c090a391397}-LibCecSharp.dll</ZipFileName>
-              <DestinationFilename>%Plugins%\process\LibCecSharp\cec.dll</DestinationFilename>
-            </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
               <LocalFileName>InputDeviceMappings\CECRemote.xml</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{9ff7d7bf-8634-41c8-934d-d7d8aac6dc82}-CECRemote.xml</ZipFileName>
               <DestinationFilename>%Base%\defaults\InputDeviceMappings\CECRemote.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="PlatformTarget_x64">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\External\x64\LibCecSharp.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{cf2e7278-a66c-4f21-be21-310443b930bd}-LibCecSharp.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\process\LibCecSharp\LibCecSharp.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="PlatformTarget_x64">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\External\x64\cec.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d93f7d48-a1ad-4159-a2df-9292c500bb1a}-cec.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\process\LibCecSharp\cec.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="PlatformTarget_x86">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\External\x86\LibCecSharp.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b318b4ab-875d-4f5a-bf74-35b79ddc9da9}-LibCecSharp.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\process\LibCecSharp\LibCecSharp.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="PlatformTarget_x86">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\External\x86\cec.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7d203d7a-6d95-4cbd-9404-90e745c0a481}-cec.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\process\LibCecSharp\cec.dll</DestinationFilename>
             </FileItem>
           </Items>
         </Files>
@@ -45,7 +59,7 @@
   </Groups>
   <Sections>
     <Items>
-      <SectionItem Guid="d0178547-e056-4045-ad52-586377c69f42" Name="Welcome Screen" ConditionGroup="">
+      <SectionItem Guid="d0178547-e056-4045-ad52-586377c69f42" Name="Welcome Screen" ConditionGroup="" Condition="None">
         <Params>
           <Items>
             <SectionParam Name="Header text">
@@ -79,7 +93,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <PanelName>Welcome Screen</PanelName>
         <WizardButtonsEnum>NextCancel</WizardButtonsEnum>
       </SectionItem>
-      <SectionItem Guid="aac212f4-0a7f-4464-adb3-fff6cd8d9c9a" Name="Install Section" ConditionGroup="">
+      <SectionItem Guid="aac212f4-0a7f-4464-adb3-fff6cd8d9c9a" Name="Install Section" ConditionGroup="" Condition="None">
         <Params>
           <Items>
             <SectionParam Name="Header Title">
@@ -101,7 +115,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
         </Params>
         <Actions>
           <Items>
-            <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="">
+            <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="" Condition="None">
               <Params>
                 <Items />
               </Params>
@@ -113,7 +127,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <PanelName>Install Section</PanelName>
         <WizardButtonsEnum>Next</WizardButtonsEnum>
       </SectionItem>
-      <SectionItem Guid="eea80a13-26c1-4354-93a2-c6911e2d9211" Name="Setup Complete" ConditionGroup="">
+      <SectionItem Guid="eea80a13-26c1-4354-93a2-c6911e2d9211" Name="Setup Complete" ConditionGroup="" Condition="None">
         <Params>
           <Items>
             <SectionParam Name="Header text">
@@ -154,49 +168,69 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <Id />
         <MinVersion>
           <Major>1</Major>
-          <Minor>1</Minor>
-          <Build>6</Build>
-          <Revision>27644</Revision>
+          <Minor>32</Minor>
+          <Build>100</Build>
+          <Revision>0</Revision>
         </MinVersion>
         <MaxVersion>
-          <Major>1</Major>
-          <Minor>1</Minor>
-          <Build>6</Build>
-          <Revision>27644</Revision>
+          <Major>*</Major>
+          <Minor>*</Minor>
+          <Build>*</Build>
+          <Revision>*</Revision>
         </MaxVersion>
         <WarnOnly>false</WarnOnly>
-        <Message>requires MediaPortal version 1.1.6.27644 to 1.1.6.27644.</Message>
+        <Message>Requires MediaPortal 1.32.100.0 or higher!</Message>
         <Name>MediaPortal</Name>
+        <Condition>None</Condition>
       </DependencyItem>
     </Items>
   </Dependencies>
   <PluginDependencies>
-    <Items />
+    <Items>
+      <PluginDependencyItem AssemblyName="CecRemote.dll">
+        <CompatibleVersion>
+          <Items>
+            <CompatibleVersionItem>
+              <MinRequiredVersion>1.6.0.0</MinRequiredVersion>
+              <DesignedForVersion>1.6.0.0</DesignedForVersion>
+            </CompatibleVersionItem>
+          </Items>
+        </CompatibleVersion>
+        <SubSystemsUsed>
+          <Items>
+            <SubSystemItem Name="MP.Config" />
+            <SubSystemItem Name="MP.Input" />
+          </Items>
+        </SubSystemsUsed>
+      </PluginDependencyItem>
+    </Items>
   </PluginDependencies>
   <GeneralInfo>
-    <Name>CECRemote (x86)</Name>
-    <Id>529db6e4-7b22-460f-bd62-7f2fd4b16868</Id>
-    <Author>Tuomas, Springfield, ajs</Author>
+    <Name>CECRemote</Name>
+    <Id>5aa2d3fd-3554-4afd-b6cf-114c63eea2d1</Id>
+    <Author>ajs, Tuomas, Springfield, libcec by Pulse-Eight</Author>
     <HomePage>https://github.com/andrewjswan/CECRemote</HomePage>
     <ForumPage />
-    <UpdateUrl>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CECRemote-x86.xml</UpdateUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CECRemote.xml</UpdateUrl>
     <Version>
-      <Major>0</Major>
-      <Minor>11</Minor>
-      <Build>1</Build>
+      <Major>1</Major>
+      <Minor>0</Minor>
+      <Build>0</Build>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Plugin, which allows user to control MediaPortal using HDMI-CEC commands with libcec compatible adapters.</ExtensionDescription>
-    <VersionDescription>Change Libcec version update 6.0.2</VersionDescription>
+    <VersionDescription>Change Libcec version update 6.0.2
+AnyCPU version</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://raw.githubusercontent.com/andrewjswan/CECRemote/master/CecRemote/Release/CECRemote-x86-{VERSION}.mpe1</OnlineLocation>
-    <ReleaseDate>2023-07-19T23:06:34</ReleaseDate>
-    <Tags>cec, remote, x86</Tags>
-    <Location>..\Release\CECRemote-x86-MAJOR.MINOR.BUILD.REVISION.mpe1</Location>
+    <OnlineLocation>https://github.com/andrewjswan/CECRemote/releases/download/v[Version]/CECRemote-[Version].mpe1</OnlineLocation>
+    <ReleaseDate>2024-03-22T23:06:34</ReleaseDate>
+    <Tags>cec, remote</Tags>
+    <PlatformCompatibility>AnyCPU</PlatformCompatibility>
+    <Location>..\Release\CECRemote-MAJOR.MINOR.BUILD.REVISION.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
-          <Value />
+          <Value>..\Source\Resources\cecremotelogo.png</Value>
           <ValueType>File</ValueType>
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
@@ -227,40 +261,61 @@ Click Next to continue or Cancel to exit Setup.</Value>
   </GeneralInfo>
   <UniqueFileList>
     <Items>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\Source\bin\Release\CECRemote.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{c489b589-09e0-4824-b2a9-e57f5dac26cc}-CECRemote.dll</ZipFileName>
+        <LocalFileName>..\Source\bin\Release\CecRemote.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d726129e-4a8b-497a-9c80-266699bb39ba}-CecRemote.dll</ZipFileName>
         <DestinationFilename>%Plugins%\process\CECRemote.dll</DestinationFilename>
       </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\External\x86\LibCecSharp.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{44a5f835-81af-499c-a9ba-2fba5b953864}-libcec.dll</ZipFileName>
-        <DestinationFilename>%Plugins%\process\LibCecSharp\LibCecSharp.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
-        <Param1 />
-        <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>..\External\x86\cec.dll</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{dd9ea537-7dba-4bb2-80e7-7c090a391397}-LibCecSharp.dll</ZipFileName>
-        <DestinationFilename>%Plugins%\process\LibCecSharp\cec.dll</DestinationFilename>
-      </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>InputDeviceMappings\CECRemote.xml</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{9ff7d7bf-8634-41c8-934d-d7d8aac6dc82}-CECRemote.xml</ZipFileName>
         <DestinationFilename>%Base%\defaults\InputDeviceMappings\CECRemote.xml</DestinationFilename>
       </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\External\x64\LibCecSharp.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{cf2e7278-a66c-4f21-be21-310443b930bd}-LibCecSharp.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\process\LibCecSharp\LibCecSharp.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\External\x64\cec.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d93f7d48-a1ad-4159-a2df-9292c500bb1a}-cec.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\process\LibCecSharp\cec.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\External\x86\LibCecSharp.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b318b4ab-875d-4f5a-bf74-35b79ddc9da9}-LibCecSharp.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\process\LibCecSharp\LibCecSharp.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\External\x86\cec.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7d203d7a-6d95-4cbd-9404-90e745c0a481}-cec.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\process\LibCecSharp\cec.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true" Condition="None">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Source\Resources\cecremotelogo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{898c40f1-81e2-4a05-acbd-412de6cfa873}-cecremotelogo.png</ZipFileName>
+        <DestinationFilename />
+      </FileItem>
     </Items>
   </UniqueFileList>
   <ProjectSettings>
     <FolderGroups />
-    <ProjectFilename>CECRemote_x86.xmp2</ProjectFilename>
-    <UpdatePath1>V:\Development\Mediaportal\CECRemote\CecRemote\Release\CECRemote-x86-{VERSION}.xml</UpdatePath1>
+    <ProjectFilename>CECRemote.xmp2</ProjectFilename>
+    <UpdatePath1>..\Release\CECRemote.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
   </ProjectSettings>
