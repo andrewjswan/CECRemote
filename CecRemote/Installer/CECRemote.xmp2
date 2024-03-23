@@ -223,10 +223,10 @@ Click Next to continue or Cancel to exit Setup.</Value>
 AnyCPU version</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://github.com/andrewjswan/CECRemote/releases/download/v[Version]/CECRemote-[Version].mpe1</OnlineLocation>
-    <ReleaseDate>2024-03-22T23:06:34</ReleaseDate>
+    <ReleaseDate>2024-03-23T21:26:57.098697+02:00</ReleaseDate>
     <Tags>cec, remote</Tags>
     <PlatformCompatibility>AnyCPU</PlatformCompatibility>
-    <Location>..\Release\CECRemote-MAJOR.MINOR.BUILD.REVISION.mpe1</Location>
+    <Location>..\Release\CECRemote-[Version].mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
