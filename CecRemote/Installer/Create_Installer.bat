@@ -17,5 +17,11 @@ IF NOT EXIST "%PROGS%\Team MediaPortal\MediaPortal\" SET PROGS=C:
 :: Get version from DLL
 FOR /F "tokens=*" %%i IN ('Tools\sigcheck.exe /accepteula /nobanner /n "..\Source\bin\Release\CECRemote.dll"') DO (SET version=%%i)
 
+:: Temp xmp2 file
+copy CECRemote.xmp2 CECRemoteTemp.xmp2
+
 :: Build MPE1
-"%PROGS%\Team MediaPortal\MediaPortal\MPEMaker.exe" CECRemote.xmp2 /B /V=%version% /UpdateXML
+"%PROGS%\Team MediaPortal\MediaPortal\MPEMaker.exe" CECRemoteTemp.xmp2 /B /V=%version% /UpdateXML
+
+:: Cleanup
+del CECRemoteTemp.xmp2
