@@ -24,13 +24,8 @@ on:
 jobs:
   build:
     name: CEC Remote / Build
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
-      - name: Setup Visual Studio 2019
-        uses: microsoft/setup-msbuild@v2
-        with:
-          vs-version: 16.11
-
       - name: Git Checkout
         uses: actions/checkout@v4
         with:
@@ -91,7 +86,7 @@ jobs:
 
   mpe:
     name: CEC Remote / MPE
-    runs-on: windows-2019
+    runs-on: windows-2022
     needs:
       - build
       - changes
