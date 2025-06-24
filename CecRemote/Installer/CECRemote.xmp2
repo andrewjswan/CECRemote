@@ -222,7 +222,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <VersionDescription>Bump libCEC to libcec-7.1.1</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://github.com/andrewjswan/CECRemote/releases/download/v[Version]/CECRemote-[Version].mpe1</OnlineLocation>
-    <ReleaseDate>2025-06-24T21:26:57</ReleaseDate>
+    <ReleaseDate>2025-06-24T21:21:21</ReleaseDate>
     <Tags>cec, remote</Tags>
     <PlatformCompatibility>AnyCPU</PlatformCompatibility>
     <Location>..\Release\CECRemote-[Version].mpe1</Location>
