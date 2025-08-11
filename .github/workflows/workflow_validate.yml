@@ -14,7 +14,7 @@ jobs:
       cpp: ${{ steps.changes.outputs.cpp }}
     steps:
       - name: ⬇️ Check out Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: ⚙️ Check for changes
         uses: dorny/paths-filter@v3
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Check out Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 🚀 Run yamllint
         run: yamllint --strict .
@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 🚀 Run C++ linter
         uses: cpp-linter/cpp-linter-action@v2
