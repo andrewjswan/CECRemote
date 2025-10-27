@@ -38,7 +38,7 @@ jobs:
         shell: cmd
 
       - name: Upload Artifact / Plugin
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: ${{ success() }}
         with:
           name: CECRemote
@@ -137,7 +137,7 @@ jobs:
         shell: cmd
 
       - name: Upload Artifact / MPE1
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: ${{ success() }}
         with:
           name: CECRemote MPE1
@@ -147,7 +147,7 @@ jobs:
           if-no-files-found: error
 
       - name: Upload Artifact / MPE XML
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: ${{ success() && needs.changes.outputs.changes == 'true' }}
         with:
           name: CECRemote XML
@@ -186,7 +186,7 @@ jobs:
         shell: cmd
 
       - name: Upload Artifact / Version Description
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: ${{ success() && needs.changes.outputs.changes == 'true' }}
         with:
           name: CECRemote Version Description
