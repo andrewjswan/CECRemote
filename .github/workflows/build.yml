@@ -218,7 +218,7 @@ jobs:
           path: ${{ github.workspace }}/CecRemote/Release
 
       - name: Update / MPE1 XML
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         with:
           message: 'CEC Remote ${{needs.mpe.outputs.version}} / Release'
           add: '${{ github.workspace }}/CecRemote/Release/CECRemote.xml'
